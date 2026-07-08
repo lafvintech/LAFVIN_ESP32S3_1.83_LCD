@@ -19,7 +19,7 @@ Recommended order:
 .. toctree::
    :maxdepth: 2
 
-   download_code
    arduino_ins
+   download_code
    lib_ins
    ../Appendix/online_flasher

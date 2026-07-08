@@ -52,3 +52,6 @@ What's in the Box
    * - 3
      - USB Type-C data cable
      - 1
+   * - 4
+     - TF card Reader
+     - 1

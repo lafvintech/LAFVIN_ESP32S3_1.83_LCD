@@ -34,7 +34,9 @@ source_suffix = {
 }
 
 templates_path = ["_templates"]
-exclude_patterns = []
+exclude_patterns = [
+    "Tutorial/3.esp-idf.rst",
+]
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]

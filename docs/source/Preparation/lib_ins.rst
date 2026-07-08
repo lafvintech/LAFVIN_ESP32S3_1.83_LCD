@@ -16,14 +16,12 @@ The following libraries are included:
 
    * - ZIP File
      - Library
-   * - ``Arduino-FT6336U.zip``
-     - FT6336U Touch Panel Driver
-   * - ``ESP32-audioI2S-master.zip``
-     - ESP32 I2S Audio Playback
+   * - ``ArduinoJson.zip``
+     - ArduinoJson Library
    * - ``lvgl.zip``
      - LVGL Graphics Library
-   * - ``SparkFun_MAX3010x_Pulse_and_Proximity_Sensor_Library.zip``
-     - MAX30102 Heart Rate Sensor
+   * - ``SensorLib.zip``
+     - Sensor Library
    * - ``TFT_eSPI.zip``
      - TFT LCD Display Driver
 
@@ -85,6 +83,6 @@ To check if all libraries are installed correctly:
 
 #. Scroll down to the "Examples from custom libraries" section.
 
-#. You should see entries for **LVGL**, **TFT_eSPI**, **FT6336U**, **ESP32-audioI2S**, and **SparkFun MAX3010x**.
+#. You should see entries for **LVGL**, **TFT_eSPI**, **ArduinoJson**, and **SensorLib**.
 
 If any library is missing, repeat the installation for that specific ``.zip`` file.

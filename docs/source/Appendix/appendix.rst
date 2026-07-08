@@ -8,3 +8,4 @@ Appendix
 
    online_flasher
    troubleshooting
+   idf_ins

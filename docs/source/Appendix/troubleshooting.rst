@@ -18,7 +18,7 @@ Board Is Not Detected
 * **Solutions**:
 
   1. Use a USB Type-C data cable.
-  2. Install the driver in :ref:`install_driver`.
+  2. Install the driver by following :ref:`preparation`.
   3. Try another USB port and press **RST**.
 
 Upload Fails
