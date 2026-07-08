@@ -1,0 +1,75 @@
+.. _arduino_tutorial:
+
+2. Arduino Tutorial
+===================
+
+This chapter contains Arduino examples for the ESP32-S3 1.83-inch LCD
+Development Board.
+
+Before You Begin
+----------------
+
+Complete :ref:`arduino_setup` and :ref:`library_installation`.
+
+Example Template
+----------------
+
+Use this structure for each Arduino lesson added to this guide.
+
+Overview
+--------
+
+Explain what the example does and which onboard peripheral it uses.
+
+What You'll Learn
+-----------------
+
+* How to upload sketches to the ESP32-S3.
+* How to use the onboard 1.83-inch ST7789 LCD.
+* How to read the QMI8658A six-axis sensor, TF card, or wireless features.
+
+Open the Example
+----------------
+
+Open the sketch from the code package:
+
+``ESP32-S3-1.83-LCD/Arduino/<example-folder>/<example-file>.ino``
+
+Hardware Connection
+-------------------
+
+Most basic examples use onboard hardware and do not require external wiring.
+When an example uses external hardware, add the wiring table in that lesson.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 40
+
+   * - Signal
+     - ESP32-S3 Pin
+   * - Onboard LCD
+     - Uses the board's built-in SPI display connection
+   * - QMI8658A
+     - Uses the board's built-in sensor connection
+   * - TF card
+     - Uses the board's built-in card slot connection
+
+Upload and Test
+---------------
+
+1. Connect the board with a USB Type-C data cable.
+2. Open the sketch in Arduino IDE.
+3. Select the board and serial port.
+4. Click **Upload**.
+5. Open **Serial Monitor** at ``115200`` baud if the example prints logs.
+
+Expected Result
+---------------
+
+Describe the visible or measurable result here.
+
+Try This Next
+-------------
+
+* Change one parameter and upload again.
+* Extend the example with another peripheral.

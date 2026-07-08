@@ -1,0 +1,44 @@
+.. _esp_idf_tutorial:
+
+3. ESP-IDF Tutorial
+===================
+
+Use ESP-IDF when you need lower-level control or want to build examples based
+on Espressif's official framework.
+
+Before You Begin
+----------------
+
+* Install the ESP-IDF version required by the product.
+* Confirm that the board can enter download mode.
+* Keep the project path short and ASCII-only.
+
+Build and Flash
+---------------
+
+Open a terminal in the example folder:
+
+.. code-block:: powershell
+
+   cd ESP32-S3-1.83-LCD/ESP-IDF/<example-folder>
+   idf.py set-target esp32s3
+   idf.py build
+   idf.py flash monitor
+
+Expected Result
+---------------
+
+Describe the serial output, display behavior, or hardware behavior users should
+see after flashing. For display examples, the 1.83-inch LCD should update after
+the firmware starts. For sensor examples, the serial monitor should print
+acceleration, gyroscope, or orientation-related data.
+
+Download Mode
+-------------
+
+If flashing fails, put the board into download mode:
+
+1. Hold **BOOT**.
+2. Press and release **RST**.
+3. Release **BOOT**.
+4. Run the flash command again.

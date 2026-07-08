@@ -1,0 +1,48 @@
+.. _quick_start:
+
+1. Quick Start
+==============
+
+Use this chapter to verify that the ESP32-S3 1.83-inch LCD Development Board
+powers on, appears as a serial device, and is ready for Arduino or ESP-IDF
+development.
+
+Before You Begin
+----------------
+
+* Complete :ref:`preparation`.
+* Use a USB Type-C data cable.
+* Insert the included 1 GB TF card only when a tutorial requires storage.
+* Confirm the product model before flashing firmware.
+
+Power On and Check the Board
+----------------------------
+
+1. Connect the board to your computer.
+2. Power on the board.
+3. Confirm that the 1.83-inch LCD turns on or shows the current firmware screen.
+4. Confirm that a serial port appears on your computer.
+5. Press **RST** once if the board does not start immediately after connection.
+
+Expected Result
+---------------
+
+After connection, the board should be powered from USB Type-C and should appear
+as a serial device. If a factory firmware is installed, the TFT LCD may show a
+demo screen, sensor data, or other startup content depending on the firmware
+version shipped with the kit.
+
+Next Steps
+----------
+
+* Use :ref:`arduino_tutorial` for beginner-friendly examples.
+* Use :ref:`esp_idf_tutorial` for lower-level ESP32-S3 development.
+* Use :ref:`online_flasher` if you need to restore firmware after testing.
+
+Troubleshooting
+---------------
+
+* If the board does not power on, check the cable and power switch.
+* If no serial port appears, see :ref:`install_driver`.
+* If uploading fails, press **BOOT**, press and release **RST**, then release
+  **BOOT** to enter download mode.

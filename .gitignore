@@ -1,0 +1,4 @@
+docs/build/
+docs/source/_images/
+*.pyc
+__pycache__/
