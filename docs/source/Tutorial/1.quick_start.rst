@@ -1,113 +1,141 @@
 .. _quick_start:
 
-1. 快速入门
-===========
+1. Quick Start
+==============
 
-本章用于帮助你在收到开发板后，快速确认 ESP32-S3 1.83-inch LCD 是否可以正常工作。
+This chapter helps you quickly check whether the ESP32-S3 1.83-inch LCD
+Development Board is working properly after you receive it.
 
-开发板出厂前通常已经预置出厂测试固件。上电后，屏幕会显示开发板的基础测试信息，
-例如 SD 卡容量、Flash 大小、传感器数据、无线扫描结果、背光等级等内容。通过这些
-信息，你可以先确认屏幕、存储、传感器、无线功能和背光控制是否正常。
+The board is usually preloaded with factory test firmware before shipping.
+After power-on, the LCD shows basic test information, such as SD card capacity,
+Flash size, sensor data, Wi-Fi scan results, backlight level, and other status
+information. These items help you confirm that the display, storage, sensor,
+wireless functions, and backlight control are working.
 
 .. note::
-   本章只是快速入门，用于完成开箱验证和固件体验。如果你想学习完整开发流程，请继续阅读
-   :ref:`Arduino 教程 <arduino_tutorial>`。
+   This chapter is only a quick start for unpacking, functional checking, and
+   firmware testing. To learn the full development workflow, continue with the
+   :ref:`Arduino Tutorial <arduino_tutorial>`.
 
-你可以选择的路径
+Choose Your Path
 ----------------
 
 .. list-table::
    :header-rows: 1
    :widths: 30 45 25
 
-   * - 情况
-     - 建议操作
-     - 跳转
-   * - 新收到的开发板，屏幕可以正常显示测试信息
-     - 先查看出厂测试固件，确认开发板功能是否正常。
-     - 继续阅读本章
-   * - 屏幕没有显示出厂测试界面，或你想恢复出厂测试固件
-     - 使用在线烧录工具重新烧录出厂固件，再验证开发板功能。
+   * - Situation
+     - Recommended Action
+     - Link
+   * - The newly received board displays the factory test screen normally.
+     - Check the factory test firmware first and confirm that the main board
+       functions work properly.
+     - Continue reading this chapter
+   * - The screen does not show the factory test interface, or you want to
+       restore the factory test firmware.
+     - Use the online flashing tool to reflash the factory firmware, then check
+       the board again.
      - :ref:`online_flasher`
-   * - 你想体验其他官方固件
-     - 使用在线烧录工具选择其他固件并烧录。
+   * - You want to try other official firmware.
+     - Use the online flashing tool to select and flash another firmware.
      - :ref:`online_flasher`
 
-准备工作
---------
+Preparation
+-----------
 
-* 使用 USB Type-C 数据线连接开发板。仅供电线可以点亮开发板，但不能用于烧录或串口通信。
-* 如果需要查看串口日志，请确认电脑已经识别到开发板串口。
-* 如果要使用在线烧录工具，请使用支持 Web Serial API 的 Chrome 或 Edge 浏览器。
-* 如果要测试 SD 卡相关信息，请插入套件中附带的 1 GB TF 卡。
+* Connect the board with a USB Type-C data cable. A charging-only cable can
+  power the board, but it cannot be used for flashing or serial communication.
+* If you need to view serial logs, make sure the computer can detect the board's
+  serial port.
+* If you want to use the online flashing tool, use Chrome, Edge, or another
+  browser that supports the Web Serial API.
+* If you want to check SD card information, insert the 1 GB TF card included in
+  the kit.
 
-步骤 1：连接开发板
-------------------
+Step 1: Connect the Board
+-------------------------
 
-1. 使用 USB Type-C 数据线将开发板连接到电脑。
-2. 等待开发板上电启动。
-3. 观察 1.83 英寸 LCD 屏幕是否点亮。
-4. 如果开发板没有立即启动，可以按一次 **RST** 按键重新启动。
+1. Connect the board to your computer with a USB Type-C data cable.
+2. Wait for the board to power on and boot.
+3. Check whether the 1.83-inch LCD turns on.
+4. If the board does not start immediately, press the **RST** button once to
+   restart it.
 
-预期结果
-~~~~~~~~
+Expected Result
+~~~~~~~~~~~~~~~
 
-屏幕应显示出厂测试固件界面。不同批次的固件界面可能略有差异，但通常会包含以下
-一项或多项信息：
+The screen should show the factory test firmware interface. The interface may
+vary slightly between firmware batches, but it usually includes one or more of
+the following items:
 
-* SD 卡容量或 SD 卡检测状态
-* Flash 容量
-* QMI8658A 传感器数据
-* Wi-Fi 无线扫描结果
-* 背光等级或背光调节状态
+* SD card capacity or SD card detection status
+* Flash capacity
+* QMI8658A sensor data
+* Wi-Fi scan results
+* Backlight level or backlight adjustment status
 
-如果这些信息可以正常显示，说明开发板的主要板载功能已经可以工作。
+If this information is displayed correctly, the main onboard functions of the
+development board are working.
 
-步骤 2：恢复出厂测试固件
-------------------------
+Step 2: Restore the Factory Test Firmware
+-----------------------------------------
 
-如果开发板没有显示出厂测试界面，或者你已经烧录过其他程序并想恢复出厂状态，可以使用
-:ref:`online_flasher` 重新烧录出厂测试固件。
+If the board does not show the factory test interface, or if you have already
+flashed another program and want to restore the factory state, use the
+:ref:`online_flasher` to reflash the factory test firmware.
 
-在线烧录适合以下场景：
+Online flashing is suitable for the following situations:
 
-* 恢复出厂测试固件
-* 验证开发板功能是否正常
-* 快速体验官方提供的其他固件
-* 在不安装 Arduino IDE 或 ESP-IDF 的情况下烧录固件
+* Restoring the factory test firmware
+* Checking whether the board functions work properly
+* Quickly trying other official firmware
+* Flashing firmware without installing Arduino IDE or ESP-IDF
 
 .. warning::
-   烧录新固件会覆盖开发板中当前运行的程序。如果你需要保留当前程序，请先确认你拥有对应的
-   源代码或固件文件。
+   Flashing new firmware overwrites the program currently running on the board.
+   If you need to keep the current program, make sure you already have the
+   corresponding source code or firmware file.
 
-步骤 3：进入正式课程
---------------------
+Step 3: Continue with the Tutorials
+-----------------------------------
 
-完成快速验证后，你可以根据自己的开发方式选择后续课程：
+After the quick check is complete, choose the next tutorial according to your
+development path:
 
-* 如果你是初学者，或希望快速上传示例程序，请阅读 :ref:`Arduino 教程 <arduino_tutorial>`。
-* 如果你只想体验不同功能固件，可以继续使用 :ref:`online_flasher` 选择并烧录其他固件。
+* If you are a beginner, or if you want to upload example programs quickly,
+  read the :ref:`Arduino Tutorial <arduino_tutorial>`.
+* If you only want to try different firmware functions, continue using the
+  :ref:`online_flasher` to select and flash other firmware.
 
-常见问题
---------
+FAQ
+---
 
-**屏幕没有显示内容**
+**The screen does not show anything**
 
-* **现象**：连接 USB 后，LCD 没有点亮或没有显示测试界面。
-* **可能原因**：USB 线供电不稳定、开发板未正常启动、出厂固件被覆盖。
-* **解决方法**：更换 USB 数据线，按一次 **RST**，或使用 :ref:`online_flasher`
-  恢复出厂测试固件。
+* **Symptom**: After connecting USB, the LCD does not turn on or does not show
+  the factory test interface.
+* **Possible causes**: The USB cable cannot provide stable power, the board did
+  not boot normally, or the factory firmware has been overwritten.
+* **Solution**: Use another USB data cable, press **RST** once, or restore the
+  factory test firmware with the :ref:`online_flasher`.
 
-**电脑没有识别到串口**
+**The computer does not detect a serial port**
 
-* **现象**：设备管理器或开发工具中没有出现可用串口。
-* **可能原因**：使用了仅供电 USB 线、USB 驱动未安装、USB 口接触不良。
-* **解决方法**：更换 USB Type-C 数据线，尝试其他 USB 接口，并参考 :ref:`preparation`
-  检查开发环境与驱动安装步骤。
+* **Symptom**: No available serial port appears in Device Manager or in the
+  development tool.
+* **Possible causes**: A charging-only USB cable is being used, the USB driver
+  is not installed, or the USB connection is unstable.
+* **Solution**: Use another USB Type-C data cable, try another USB port, and
+  refer to :ref:`preparation` to check the development environment and driver
+  installation steps.
 
-**在线烧录无法连接开发板**
+**The online flasher cannot connect to the board**
 
-* **现象**：浏览器中无法选择串口，或点击连接后失败。
-* **可能原因**：浏览器不支持 Web Serial API、串口被其他软件占用、开发板未进入可烧录状态。
-* **解决方法**：使用 Chrome 或 Edge 浏览器，关闭串口监视器等占用串口的软件；如果仍然失败，
-  按住 **BOOT**，短按 **RST**，松开 **BOOT** 后重新连接并烧录。
+* **Symptom**: The browser cannot select a serial port, or the connection fails
+  after you click Connect.
+* **Possible causes**: The browser does not support the Web Serial API, the
+  serial port is being used by another program, or the board is not in a
+  flashable state.
+* **Solution**: Use Chrome or Edge, close programs that may be using the serial
+  port, such as Serial Monitor. If the problem persists, hold **BOOT**, press
+  **RST** once, release **BOOT**, then reconnect and flash again.

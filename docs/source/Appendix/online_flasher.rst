@@ -24,15 +24,15 @@ Flashing Steps
 
    .. image:: img/olf2.png
 
-#. Select your kit or device model.for example, "ESP32-S3 Multimedia Kit".
+#. Select your kit or device model.for example, "ESP32S3 1.83 LCD".
 
    .. image:: img/olf3.png
 
-#. Select the firmware to flash.In this kit, we have selected “ALL-IN-ONE”
+#. Select the firmware to flash.In this kit, we have selected "Factory Firmware”
 
    .. image:: img/olf4.png
 
-#. Select the firmware version.In this kit, we have selected “ALL-IN-ONE”
+#. Select the firmware version.In this kit, we have selected “Factory Firmware”
 
    .. image:: img/olf5.png
 
