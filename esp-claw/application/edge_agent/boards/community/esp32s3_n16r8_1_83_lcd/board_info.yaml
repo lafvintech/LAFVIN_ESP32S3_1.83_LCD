@@ -1,0 +1,4 @@
+board: esp32s3_n16r8_1_83_lcd
+chip: esp32s3
+description: "Community ESP32-S3 N16R8 board with 1.83-inch SPI LCD"
+manufacturer: "Community"

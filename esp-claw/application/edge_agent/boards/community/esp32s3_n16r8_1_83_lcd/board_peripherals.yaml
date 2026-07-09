@@ -1,0 +1,33 @@
+version: 1.0.0
+# Peripherals Configuration for ESP32-S3 N16R8 1.83-inch LCD board
+#
+# 1.83" SPI ST7789 LCD wiring:
+#   LCD_SCLK = GPIO40
+#   LCD_MOSI = GPIO45
+#   LCD_CS   = GPIO42
+#   LCD_DC   = GPIO41
+#   LCD_RST  = GPIO39
+#   LCD_BL   = GPIO46
+#
+# GPIO1-GPIO11 are left uninitialized for expansion use.
+
+peripherals:
+  - name: spi_display
+    type: spi
+    role: master
+    config:
+      spi_bus_config:
+        spi_port: SPI3_HOST
+        data0_io_num: 45
+        sclk_io_num: 40
+        max_transfer_sz: 136320
+
+  - name: ledc_backlight
+    type: ledc
+    role: none
+    config:
+      gpio_num: 46
+      freq_hz: 5000
+      duty: 0
+      duty_resolution: LEDC_TIMER_10_BIT
+      output_invert: false
