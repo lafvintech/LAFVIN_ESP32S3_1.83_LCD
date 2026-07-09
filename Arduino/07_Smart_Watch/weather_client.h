@@ -19,7 +19,7 @@ extern "C" {
 
 // Primary provider: OpenWeatherMap
 #ifndef WEATHER_API_KEY
-  #define WEATHER_API_KEY "547e908a5e308cb56e43683bca8015f6"
+  #define WEATHER_API_KEY "Your Openweather api key"
 #endif
 #ifndef WEATHER_API_HOST
   #define WEATHER_API_HOST "https://api.openweathermap.org"
