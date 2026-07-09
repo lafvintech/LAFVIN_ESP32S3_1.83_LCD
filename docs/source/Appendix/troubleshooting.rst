@@ -6,7 +6,7 @@ Troubleshooting
 Use this page to collect common setup and runtime problems.
 
 Board Is Not Detected
-=====================
+-------------------------
 
 * **Symptom**: No serial port appears after connecting the board.
 * **Possible Causes**:
@@ -22,7 +22,7 @@ Board Is Not Detected
   3. Try another USB port and press **RST**.
 
 Upload Fails
-============
+-------------------------
 
 * **Symptom**: Arduino IDE or ESP-IDF cannot upload firmware.
 * **Possible Causes**:
@@ -38,7 +38,7 @@ Upload Fails
   3. Enter download mode and upload again.
 
 Firmware Runs Incorrectly
-=========================
+-------------------------
 
 * **Symptom**: LCD, QMI8658A sensor, TF card, or wireless behavior does not
   match the tutorial.
