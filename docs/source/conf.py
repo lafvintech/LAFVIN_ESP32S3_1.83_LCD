@@ -48,19 +48,3 @@ html_theme_options = {
     "logo_only": True,
 }
 
-# PDF / LaTeX configuration
-latex_engine = "xelatex"
-
-# Read the Docs currently does not support xindy reliably
-latex_use_xindy = False
-
-# Generate exactly one PDF document
-latex_documents = [
-    (
-        "index",
-        "LAFVIN-ESP32S3-1.83-LCD.tex",
-        "ESP32-S3 1.83-inch LCD Development Board",
-        "LAFVIN",
-        "manual",
-    ),
-]
