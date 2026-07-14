@@ -1,6 +1,9 @@
 # Read the Docs configuration file for this Sphinx project.
 version: 2
 
+formats:
+  - pdf
+
 build:
   os: ubuntu-22.04
   tools:
